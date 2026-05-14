@@ -1,0 +1,21 @@
+{
+  "character": "Shiina Mayuri",
+  "speaker": "shiina_mayuri",
+  "language": "ja",
+  "final_model_combo": {
+    "sovits": {
+      "tag": "e20",
+      "local_path": "models/sovits/mayuri_v2_e20.pth",
+      "hf_repo": "https://huggingface.co/SteinsGateSg/mayuri-voice",
+      "hf_path": "models/sovits/mayuri_v2_e20.pth"
+    },
+    "gpt": {
+      "tag": "e8",
+      "local_path": "models/gpt/mayuri_v2-e8.ckpt",
+      "hf_repo": "https://huggingface.co/SteinsGateSg/mayuri-voice",
+      "hf_path": "models/gpt/mayuri_v2-e8.ckpt"
+    }
+  },
+  "reference_index": "refs/index.csv",
+  "hf_dataset_repo": "https://huggingface.co/datasets/SteinsGateSg/mayuri-voice-dataset"
+}

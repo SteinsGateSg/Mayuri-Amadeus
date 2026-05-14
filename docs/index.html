@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mayuri-Amadeus</title>
+    <meta
+      name="description"
+      content="Mayuri-Amadeus is a Shiina Mayuri character-instance repository for GPT-SoVITS training, reference management, and inference."
+    />
+    <link rel="stylesheet" href="./assets/site.css" />
+  </head>
+  <body>
+    <div class="lang-float" aria-label="Language selector">
+      <button class="lang-chip is-active" type="button" data-lang="en">EN</button>
+      <button class="lang-chip" type="button" data-lang="zh">中文</button>
+      <button class="lang-chip" type="button" data-lang="ja">日本語</button>
+    </div>
+
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Character Voice System</p>
+          <h1>Mayuri-Amadeus</h1>
+          <p class="lede" data-i18n="hero.lede">
+            A Shiina Mayuri character repository shaped for public release:
+            curated refs, model metadata, training wrappers, and a lightweight
+            inference workflow built around GPT-SoVITS.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://huggingface.co/SteinsGateSg/mayuri-voice" data-i18n="hero.modelButton">Model on Hugging Face</a>
+            <a class="button secondary" href="https://huggingface.co/datasets/SteinsGateSg/mayuri-voice-dataset" data-i18n="hero.datasetButton">Dataset on Hugging Face</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="status-card">
+            <p class="card-kicker" data-i18n="hero.kicker">Final Pair</p>
+            <div class="pair-grid">
+              <div>
+                <span class="label">SoVITS</span>
+                <strong>e20</strong>
+              </div>
+              <div>
+                <span class="label">GPT</span>
+                <strong>e8</strong>
+              </div>
+            </div>
+            <p class="microcopy" data-i18n="hero.microcopy">
+              Reference-driven single-character setup tuned on top of GPT-SoVITS v2.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="stats">
+          <article>
+            <span class="stat-value">1526</span>
+            <span class="stat-label" data-i18n="stats.dataset">dataset WAV clips</span>
+          </article>
+          <article>
+            <span class="stat-value">1416</span>
+            <span class="stat-label" data-i18n="stats.filtered">filtered training samples</span>
+          </article>
+          <article>
+            <span class="stat-value">2.04h</span>
+            <span class="stat-label" data-i18n="stats.duration">filtered speech duration</span>
+          </article>
+          <article>
+            <span class="stat-value">10</span>
+            <span class="stat-label" data-i18n="stats.refs">reference-bank emotion groups</span>
+          </article>
+        </section>
+
+        <section class="two-col">
+          <div class="section-copy">
+            <p class="section-tag" data-i18n="overview.tag">What This Repo Is</p>
+            <h2 data-i18n="overview.title">Character repo, not framework repo</h2>
+            <p data-i18n="overview.body">
+              Mayuri-Amadeus is the character-instance side of a two-repo split.
+              It keeps Mayuri-specific assets and metadata, while reusable workflow
+              code lives in Persona-Forge.
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="info-card">
+              <h3 data-i18n="overview.card1.title">Curated Refs</h3>
+              <p data-i18n="overview.card1.body">Small, emotion-grouped reference clips are included directly in the repository.</p>
+            </article>
+            <article class="info-card">
+              <h3 data-i18n="overview.card2.title">HF-Backed Assets</h3>
+              <p data-i18n="overview.card2.body">Large model files and the full dataset are published on Hugging Face instead of git.</p>
+            </article>
+            <article class="info-card">
+              <h3 data-i18n="overview.card3.title">Inference-Ready</h3>
+              <p data-i18n="overview.card3.body">A thin wrapper resolves the final GPT + SoVITS pair once you download them into models/.</p>
+            </article>
+            <article class="info-card">
+              <h3 data-i18n="overview.card4.title">LLM-Friendly</h3>
+              <p data-i18n="overview.card4.body">The repository is structured as a reusable character asset for later dialogue and retrieval demos.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="spotlight">
+          <div class="spotlight-copy">
+            <p class="section-tag" data-i18n="quick.tag">Quick Start</p>
+            <h2 data-i18n="quick.title">Run local synthesis in one command</h2>
+            <p data-i18n="quick.body">
+              After downloading the final weights from Hugging Face into models/,
+              you can generate Mayuri speech directly with the bundled reference bank.
+            </p>
+          </div>
+          <div class="code-card">
+            <pre><code>python scripts/synthesize.py \
+  --ref-id MAY_0053 \
+  --target-text "おかりん、今日は何をしているの？" \
+  --target-language 日文 \
+  --output-dir outputs/preview/latest</code></pre>
+          </div>
+        </section>
+
+        <section class="demo-section">
+          <div class="section-copy">
+            <p class="section-tag" data-i18n="demo.tag">Audio Demo</p>
+            <h2 data-i18n="demo.title">Short clips from the current release</h2>
+            <p data-i18n="demo.body">
+              These samples are kept intentionally short so the homepage feels like a real release page rather than a raw experiment log.
+            </p>
+          </div>
+          <div class="demo-grid">
+            <article class="demo-card">
+              <div class="demo-head">
+                <span class="demo-badge" data-i18n="demo.ref.badge">Reference</span>
+                <h3 data-i18n="demo.ref.title">Neutral reference clip</h3>
+              </div>
+              <p class="demo-copy" data-i18n="demo.ref.body">One curated line from the reference bank used to anchor tone and pacing.</p>
+              <p class="demo-line"><span class="demo-line-label" data-i18n="demo.lineLabel">Line</span><span>「うんそれは仕方ないと思うよ。」</span></p>
+              <audio controls preload="none" src="./assets/audio/reference-neutral.wav"></audio>
+            </article>
+
+            <article class="demo-card">
+              <div class="demo-head">
+                <span class="demo-badge" data-i18n="demo.jp.badge">Japanese</span>
+                <h3 data-i18n="demo.jp.title">Japanese synthesis</h3>
+              </div>
+              <p class="demo-copy" data-i18n="demo.jp.body">Local inference using the final public pair: SoVITS e20 plus GPT e8.</p>
+              <p class="demo-line"><span class="demo-line-label" data-i18n="demo.lineLabel">Line</span><span>「おかりん、今日は何をしているの？」</span></p>
+              <audio controls preload="none" src="./assets/audio/demo-ja.wav"></audio>
+            </article>
+
+            <article class="demo-card">
+              <div class="demo-head">
+                <span class="demo-badge" data-i18n="demo.zh.badge">Chinese</span>
+                <h3 data-i18n="demo.zh.title">Cross-lingual synthesis</h3>
+              </div>
+              <p class="demo-copy" data-i18n="demo.zh.body">A simple Chinese line, kept here to show the model pair beyond same-language playback.</p>
+              <p class="demo-line"><span class="demo-line-label" data-i18n="demo.lineLabel">Line</span><span>「亲爱的你啊，好久不见」</span></p>
+              <audio controls preload="none" src="./assets/audio/demo-zh.wav"></audio>
+            </article>
+          </div>
+        </section>
+
+        <section class="links-grid">
+          <article class="link-card">
+            <p class="section-tag" data-i18n="links.repo.tag">Repository</p>
+            <h3 data-i18n="links.repo.title">Core Documents</h3>
+            <ul>
+              <li><code>README.md</code></li>
+              <li><code>README_ZH.md</code></li>
+              <li><code>PROJECT_OVERVIEW_ZH.md</code></li>
+              <li><code>PROJECT_NARRATIVE_ZH.md</code></li>
+            </ul>
+          </article>
+          <article class="link-card">
+            <p class="section-tag" data-i18n="links.assets.tag">Assets</p>
+            <h3 data-i18n="links.assets.title">What is inside</h3>
+            <ul>
+              <li><code>refs/index.csv</code></li>
+              <li><code>profiles/mayuri.yaml</code></li>
+              <li><code>weights/final_model_combo.json</code></li>
+              <li><code>metadata/reference_bank/emotion_summary.json</code></li>
+            </ul>
+          </article>
+          <article class="link-card">
+            <p class="section-tag" data-i18n="links.external.tag">External</p>
+            <h3 data-i18n="links.external.title">Published endpoints</h3>
+            <ul>
+              <li><a href="https://huggingface.co/SteinsGateSg/mayuri-voice" data-i18n="links.external.model">HF model repo</a></li>
+              <li><a href="https://huggingface.co/datasets/SteinsGateSg/mayuri-voice-dataset" data-i18n="links.external.dataset">HF dataset repo</a></li>
+              <li><a href="https://github.com/SteinsGateSg/Mayuri-Amadeus" data-i18n="links.external.github">GitHub repo</a></li>
+              <li><a href="https://github.com/SteinsGateSg/Persona-Forge" data-i18n="links.external.framework">Persona-Forge framework repo</a></li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="roadmap">
+          <div class="section-copy">
+            <p class="section-tag" data-i18n="roadmap.tag">Next</p>
+            <h2 data-i18n="roadmap.title">Where this repository is headed</h2>
+          </div>
+          <div class="timeline">
+            <article>
+              <strong data-i18n="roadmap.item1.title">1. Character release</strong>
+              <p data-i18n="roadmap.item1.body">Ship a clean public GitHub repo linked to HF weights and dataset.</p>
+            </article>
+            <article>
+              <strong data-i18n="roadmap.item2.title">2. Reference workflows</strong>
+              <p data-i18n="roadmap.item2.body">Improve emotion-aware reference selection and publish better demo comparisons.</p>
+            </article>
+            <article>
+              <strong data-i18n="roadmap.item3.title">3. LLM playground</strong>
+              <p data-i18n="roadmap.item3.body">Connect the voice system to role-style generation, retrieval, and dialogue planning.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./assets/site.js"></script>
+  </body>
+</html>

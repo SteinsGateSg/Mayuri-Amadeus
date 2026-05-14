@@ -1,0 +1,28 @@
+{
+  "total_samples": 1416,
+  "labeled_samples": 1416,
+  "emotion_counts": {
+    "neutral": 396,
+    "gentle": 349,
+    "happy": 183,
+    "excited": 73,
+    "worried": 131,
+    "sad": 49,
+    "teasing": 76,
+    "embarrassed": 8,
+    "serious": 113,
+    "other": 38
+  },
+  "reference_candidate_counts": {
+    "neutral": 181,
+    "gentle": 258,
+    "happy": 149,
+    "excited": 43,
+    "worried": 99,
+    "sad": 31,
+    "teasing": 54,
+    "embarrassed": 3,
+    "serious": 71,
+    "other": 4
+  }
+}

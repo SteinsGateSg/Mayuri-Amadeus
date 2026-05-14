@@ -1,0 +1,48 @@
+emotion,rank,sample_id,wav_path,text_path,duration_sec,reference_score,intensity,text,reason
+embarrassed,1,MAY_0719,refs/embarrassed/MAY_0719.wav,refs/embarrassed/MAY_0719.txt,7.083,5,4,そういうことされるとね、マユシエは悲しいし恥ずかしいです。,明确表达害羞与悲伤，文本完整，时长合适。
+embarrassed,2,MAY_0170,refs/embarrassed/MAY_0170.wav,refs/embarrassed/MAY_0170.txt,6.056,4,3,あううん違うよお昼ご飯を買ってこようかと思って。,语气带有慌乱与解释感，情绪层次清晰，时长适中，适合参考。
+embarrassed,3,MAY_0030,refs/embarrassed/MAY_0030.wav,refs/embarrassed/MAY_0030.txt,5.24,4,2,だから占いってばマユシの名前書いちゃったし。,时长合适，句子完整，带有轻微懊恼或不好意思的情绪。
+excited,1,MAY_0213,refs/excited/MAY_0213.wav,refs/excited/MAY_0213.txt,4.661,5,4,わー あかりすごいね。,感叹词开头，赞美语气强烈，情感鲜明且时长适中。
+excited,2,MAY_0281,refs/excited/MAY_0281.wav,refs/excited/MAY_0281.txt,4.208,5,4,わああああ!オカリナ太っ腹だね!,情绪饱满明确，句子完整，时长适中。
+excited,3,MAY_0279,refs/excited/MAY_0279.wav,refs/excited/MAY_0279.txt,5.04,5,4,じゃあさじゃあさもっとじゃんじゃん送ってみようよ。,情绪饱满积极，句式完整且富有号召力，时长完美。
+excited,4,MAY_0913,refs/excited/MAY_0913.wav,refs/excited/MAY_0913.txt,5.112,5,4,わあオカリこんな大金どうするの。,感叹词开头情绪饱满明确，句子完整，时长合适。
+excited,5,MAY_1428,refs/excited/MAY_1428.wav,refs/excited/MAY_1428.txt,5.296,5,4,でもねラボだってすっごく熱いよ。,情绪积极饱满，表达完整，时长标准，非常适合作参考。
+gentle,1,MAY_1410,refs/gentle/MAY_1410.wav,refs/gentle/MAY_1410.txt,3.904,5,4,ずっと大好きでいさせてください。,情感饱满且句式完整独立，时长极佳，非常适合作为推理参考。
+gentle,2,MAY_1483,refs/gentle/MAY_1483.wav,refs/gentle/MAY_1483.txt,4.448,5,3,元気出してほしいよ。,时长适中，语义完整，鼓励语气明确，非常适合作为参考。
+gentle,3,MAY_1070,refs/gentle/MAY_1070.wav,refs/gentle/MAY_1070.txt,4.384,5,3,どうしたの?あっおかりんもバナナ食べる?,句子完整自然，情绪温和关切，时长非常适合作为参考。
+gentle,4,MAY_0838,refs/gentle/MAY_0838.wav,refs/gentle/MAY_0838.txt,4.736,5,3,お帰り。そんなに急いでどこいくの?,日常问候与疑问结合，文本完整自然，情感清晰，非常适合作为交互参考。
+gentle,5,MAY_1311,refs/gentle/MAY_1311.wav,refs/gentle/MAY_1311.txt,4.795,5,3,このままずっと続いてほしいなって思ってた。,句子完整独立，情感温和明确，时长适中，极适合作参考。
+happy,1,MAY_0462,refs/happy/MAY_0462.wav,refs/happy/MAY_0462.txt,4.872,5,4,あうん、ルカくんかわいいね。,情感明确饱满，带有明显的喜爱与感叹语气，时长完美。
+happy,2,MAY_1207,refs/happy/MAY_1207.wav,refs/happy/MAY_1207.txt,5.28,5,4,ルカちゃんってね、マユシがドキドキしちゃうぐらい可愛いもん。,情感表达明确饱满，带有喜爱与兴奋感，句子完整且时长理想。
+happy,3,MAY_1446,refs/happy/MAY_1446.wav,refs/happy/MAY_1446.txt,3.712,5,4,マユシはとっても幸せです。,直白表达幸福，情绪明确饱满，时长完美，极适合作参考。
+happy,4,MAY_1063,refs/happy/MAY_1063.wav,refs/happy/MAY_1063.txt,5.952,5,4,あのね、まゆしいはおかりに愛されちゃってるね。えへへ。,语义完整，情绪明确且带有标志性笑声，时长适中。
+happy,5,MAY_0930,refs/happy/MAY_0930.wav,refs/happy/MAY_0930.txt,2.848,5,4,どぅどぅるー まゆしいでーす。,标志性问候语，情绪欢快明确，时长合适，极具角色代表性。
+neutral,1,MAY_0053,refs/neutral/MAY_0053.wav,refs/neutral/MAY_0053.txt,3.84,5,2,うんそれは仕方ないと思うよ。,文本完整独立，语气平和自然，时长适中，非常适合作为中性参考。
+neutral,2,MAY_0939,refs/neutral/MAY_0939.wav,refs/neutral/MAY_0939.txt,3.52,5,2,バレルさんはありがちじゃないよ。,文本简短完整，语气自然肯定，时长处于理想区间，非常适合作为参考。
+neutral,3,MAY_0300,refs/neutral/MAY_0300.wav,refs/neutral/MAY_0300.txt,5.584,5,2,スライムになって帰ってきた騎士さんたちがジェリーマンなんだね。,句子完整且信息量适中，时长理想，语气平稳清晰，非常适合作为参考音频。
+neutral,4,MAY_0485,refs/neutral/MAY_0485.wav,refs/neutral/MAY_0485.txt,5.788,5,2,ちなみにね、マユシーはコスでお金は取らない主義なのです。,文本完整独立，时长处于理想区间，语气平和自然，适合作为基准参考。
+neutral,5,MAY_0068,refs/neutral/MAY_0068.wav,refs/neutral/MAY_0068.txt,7.152,5,2,シャープボタンを押した後、温めたい秒数をプッシュしてください。,完整设备操作指引，语气平稳客观，时长标准，极适合作为中性基准参考。
+other,1,MAY_1374,refs/other/MAY_1374.wav,refs/other/MAY_1374.txt,3.44,4,3,こんなのバカみたいだよ。,文本完整，情绪明确（抱怨/无奈），时长在理想区间内。
+other,2,MAY_0529,refs/other/MAY_0529.wav,refs/other/MAY_0529.txt,5.685,4,3,うん?京馬?京馬って誰?,文本完整，疑问语气明确，时长适中，适合作为参考。
+other,3,MAY_1462,refs/other/MAY_1462.wav,refs/other/MAY_1462.txt,2.944,4,3,はあああれ何。,独立短句，时长适中，惊讶疑惑情绪明确，适合参考。
+other,4,MAY_0121,refs/other/MAY_0121.wav,refs/other/MAY_0121.txt,2.392,3,2,あれれ お客さん。,短句但完整，带有轻微惊讶与招呼语气，时长偏短但可用。
+sad,1,MAY_0160,refs/sad/MAY_0160.wav,refs/sad/MAY_0160.txt,4.784,5,4,おかりんって悪いんだ。まゆしは悲しいです。,直接陈述悲伤情绪，独立完整且时长极佳，非常适合作参考。
+sad,2,MAY_1389,refs/sad/MAY_1389.wav,refs/sad/MAY_1389.txt,6.208,5,4,クリスちゃん、行かないで、行かないでよ。,挽留语句情感饱满，结构完整，时长适中，适合参考。
+sad,3,MAY_1381,refs/sad/MAY_1381.wav,refs/sad/MAY_1381.txt,6.352,5,4,マヤしいはね。クリスちゃんがいなくなるの、やだよ。,文本完整，情感明确表达不舍与担忧，时长适中。
+sad,4,MAY_1383,refs/sad/MAY_1383.wav,refs/sad/MAY_1383.txt,6.688,5,4,マユシだってクリスちゃんを犠牲にしてまで生きていたくないよ。,表达强烈的拒绝与悲伤，语义完整，时长合适。
+sad,5,MAY_1386,refs/sad/MAY_1386.wav,refs/sad/MAY_1386.txt,6.976,5,4,でもクリスちゃんがいなくなったらマユシイは悲しいよ。,句子完整，明确表达悲伤与担忧情绪，时长处于理想区间，非常适合作为参考。
+serious,1,MAY_1382,refs/serious/MAY_1382.wav,refs/serious/MAY_1382.txt,5.616,5,4,マヤ神のためなんかに消えたりしないでね。,句式完整，语气恳切严肃，时长符合标准。
+serious,2,MAY_1464,refs/serious/MAY_1464.wav,refs/serious/MAY_1464.txt,6.944,5,4,第三次世界大戦って大変だ大変だよ。,文本完整独立，时长理想，严肃情绪明确，非常适合作为参考。
+serious,3,MAY_0328,refs/serious/MAY_0328.wav,refs/serious/MAY_0328.txt,4.48,5,3,まずは宝くじを買ってこなくちゃ。,文本完整独立，时长适中，语气带有明确决心，非常适合作为参考。
+serious,4,MAY_0575,refs/serious/MAY_0575.wav,refs/serious/MAY_0575.txt,4.597,5,3,ダルくん、フェリスちゃんを困らせたらダメなんだよ。,劝诫语气明确，句子结构完整，时长适中。
+serious,5,MAY_0046,refs/serious/MAY_0046.wav,refs/serious/MAY_0046.txt,5.083,5,3,マユシはオカリナの人質だからここにいようと思います。,句子结构完整，语气坚定且带有角色特色，非常适合作为参考。
+teasing,1,MAY_0336,refs/teasing/MAY_0336.wav,refs/teasing/MAY_0336.txt,4.544,5,3,なんだかとっても胡散臭いね。へへへ。,时长适中，文本完整，带有明显的调侃与轻笑情绪，非常适合作为参考。
+teasing,2,MAY_0355,refs/teasing/MAY_0355.wav,refs/teasing/MAY_0355.txt,4.224,5,3,おかリー ルカ君をいじめちゃだめだよ。,语气带有调侃与轻微劝阻，句子独立，时长适中。
+teasing,3,MAY_0537,refs/teasing/MAY_0537.wav,refs/teasing/MAY_0537.txt,5.045,5,3,コスプレさせたら映えそうだな。へへ。,时长处于理想区间，文本独立完整，带有明确的调侃语气，非常适合作为参考。
+teasing,4,MAY_0201,refs/teasing/MAY_0201.wav,refs/teasing/MAY_0201.txt,5.12,5,3,あああ唐揚げ二個目はあげるって言ってないよ。,情绪明确带点俏皮，句子完整独立，时长完美，非常适合作为参考。
+teasing,5,MAY_0718,refs/teasing/MAY_0718.wav,refs/teasing/MAY_0718.txt,5.248,5,3,やあ、お帰り。覗きは良くないよ。,情绪明确带调侃意味，句子完整独立，时长完美。
+worried,1,MAY_1387,refs/worried/MAY_1387.wav,refs/worried/MAY_1387.txt,5.934,5,5,そういう問題じゃないもん!クリスさんが消えちゃうのが嫌なんだもん!,情感强烈且明确，句式完整独立，时长合适，适合表现高情绪强度。
+worried,2,MAY_1466,refs/worried/MAY_1466.wav,refs/worried/MAY_1466.txt,4.624,5,4,ううわあ、マヨシは死んじゃうの?,文本完整，担忧情绪强烈明确，时长完美，极适合作为参考。
+worried,3,MAY_0512,refs/worried/MAY_0512.wav,refs/worried/MAY_0512.txt,5.07,5,4,なんだかマユシは怖いよ。,情绪明确（害怕/担忧），时长适中，句子独立完整，非常适合作为参考。
+worried,4,MAY_0035,refs/worried/MAY_0035.wav,refs/worried/MAY_0035.txt,5.131,5,4,ねえねえ何があったの顔色すごく悪いけど。,句子完整，关切情绪强烈且明确，时长理想，极适合作为参考。
+worried,5,MAY_1158,refs/worried/MAY_1158.wav,refs/worried/MAY_1158.txt,6.576,5,4,嫌がってるのに無理やり着せたりしてねトラウマになっちゃったら良くないもん。,表达明确的担忧与劝诫，语义完整，时长理想。

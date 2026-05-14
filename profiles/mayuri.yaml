@@ -1,0 +1,37 @@
+character: shiina_mayuri
+name: Shiina Mayuri
+language: ja
+speaker: shiina_mayuri
+
+framework:
+  package: persona-forge
+
+dataset:
+  transcript_csv: data/meta/mayuri_asr_raw.csv
+  wav_dir: data/raw/wav
+  filtered_manifest: data/manifests/mayuri_ja_filtered.list
+  filtered_stats: data/manifests/mayuri_ja_filtered.stats.json
+  filtered_rejects: data/manifests/mayuri_ja_filtered.rejects.csv
+
+reference_bank:
+  labels_jsonl: metadata/reference_bank/emotion_labels.jsonl
+  labels_csv: metadata/reference_bank/emotion_labels.csv
+  shortlist_csv: metadata/reference_bank/reference_shortlist.csv
+  summary_json: metadata/reference_bank/emotion_summary.json
+  refs_index: refs/index.csv
+
+final_models:
+  sovits:
+    local_path: models/sovits/mayuri_v2_e20.pth
+    hf_repo: https://huggingface.co/SteinsGateSg/mayuri-voice
+    hf_path: models/sovits/mayuri_v2_e20.pth
+    tag: e20
+  gpt:
+    local_path: models/gpt/mayuri_v2-e8.ckpt
+    hf_repo: https://huggingface.co/SteinsGateSg/mayuri-voice
+    hf_path: models/gpt/mayuri_v2-e8.ckpt
+    tag: e8
+
+hf_repos:
+  model: https://huggingface.co/SteinsGateSg/mayuri-voice
+  dataset: https://huggingface.co/datasets/SteinsGateSg/mayuri-voice-dataset

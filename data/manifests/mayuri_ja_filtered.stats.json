@@ -1,0 +1,15 @@
+{
+  "input_csv": "/home/steinsgate/projects/Mayuri-Amadeus/data/meta/mayuri_asr_raw.csv",
+  "wav_dir": "/home/steinsgate/projects/mayuri_voice/data/raw/wav",
+  "audio_column": "voice_file",
+  "text_column": "asr_text",
+  "speaker": "shiina_mayuri",
+  "language": "ja",
+  "rows_total": 1526,
+  "rows_kept": 1416,
+  "rows_rejected": 110,
+  "min_sec": 1.0,
+  "max_sec": 12.0,
+  "hours_total": 2.29,
+  "hours_kept": 2.036
+}
