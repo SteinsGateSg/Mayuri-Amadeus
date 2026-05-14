@@ -18,9 +18,9 @@ const translations = {
     "hero.microcopy":
       "Reference-driven single-character setup tuned on top of GPT-SoVITS v2.",
     "visual.tag": "Worldline Fragment",
-    "visual.title": "A quieter image inside the project page",
+    "visual.title": "An ink-wash fragment from the same dusk",
     "visual.body":
-      "The landing screen opens with distance and sky. Inside the project, this earlier image stays as a warmer, more intimate fragment of the same mood.",
+      "This image remains inside the project page as a softer, more intimate view of the same worldline atmosphere.",
     "stats.dataset": "dataset WAV clips",
     "stats.filtered": "filtered training samples",
     "stats.duration": "filtered speech duration",
@@ -48,7 +48,7 @@ const translations = {
     "demo.tag": "Audio Demo",
     "demo.title": "Short clips from the current release",
     "demo.body":
-      "These samples are kept intentionally short so the homepage feels like a real release page rather than a raw experiment log.",
+      "Short reference and synthesis clips from the current public model pair.",
     "demo.ref.badge": "Reference",
     "demo.ref.title": "Neutral reference clip",
     "demo.ref.body":
@@ -103,9 +103,9 @@ const translations = {
     "hero.microcopy":
       "基于 GPT-SoVITS v2 调优的 reference-driven 单角色方案。",
     "visual.tag": "世界线碎片",
-    "visual.title": "把更安静的那张图留在项目页里",
+    "visual.title": "同一黄昏里的另一幅水墨片段",
     "visual.body":
-      "首屏用更开阔的天空和距离感来进入气氛，项目页里则保留这张更温暖、更贴近角色的旧图，作为同一情绪的另一面。",
+      "这张图保留在项目页中，作为同一世界线气氛下更柔和、更贴近角色的一面。",
     "stats.dataset": "数据集音频片段",
     "stats.filtered": "过滤后训练样本",
     "stats.duration": "过滤后语音时长",
@@ -133,7 +133,7 @@ const translations = {
     "demo.tag": "音频 Demo",
     "demo.title": "当前版本的短音频示例",
     "demo.body":
-      "这些样例刻意保持简短，让首页更像正式发布页，而不是原始实验日志。",
+      "以下是当前公开模型组合对应的简短参考音频与生成示例。",
     "demo.ref.badge": "参考音频",
     "demo.ref.title": "中性参考句",
     "demo.ref.body":
@@ -188,9 +188,9 @@ const translations = {
     "hero.microcopy":
       "GPT-SoVITS v2 上で調整した reference-driven 単一キャラクター構成です。",
     "visual.tag": "世界線の断片",
-    "visual.title": "より静かな一枚はプロジェクトページ側へ",
+    "visual.title": "同じ夕景を映す水墨の断片",
     "visual.body":
-      "ランディングでは空と距離感で導入し、プロジェクト本編では以前の画像を、より温かく親密な感触を持つ同一ムードの断片として残します。",
+      "同じ世界線の空気を、よりやわらかく親密に映した一枚としてここに残しています。",
     "stats.dataset": "データセット音声クリップ",
     "stats.filtered": "学習用フィルタ済みサンプル",
     "stats.duration": "フィルタ後の総音声時間",
@@ -218,7 +218,7 @@ const translations = {
     "demo.tag": "音声デモ",
     "demo.title": "現行リリースの短いサンプル",
     "demo.body":
-      "トップページを実験ログではなく公開ページらしく見せるため、短いサンプルだけを置いています。",
+      "現在公開しているモデル構成による短い参照音声と生成サンプルです。",
     "demo.ref.badge": "参照音声",
     "demo.ref.title": "ニュートラル参照クリップ",
     "demo.ref.body":

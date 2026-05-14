@@ -1,8 +1,21 @@
 # Mayuri-Amadeus
 
-中文文档： [README_ZH.md](README_ZH.md)
+<p align="left">
+  <a href="https://steinsgatesg.github.io/Mayuri-Amadeus/">
+    <img src="https://img.shields.io/badge/Homepage-4a2f23?style=flat-square&logo=googlechrome&logoColor=fff7f2" alt="Homepage" />
+  </a>
+  <a href="https://github.com/SteinsGateSg/Mayuri-Amadeus">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=ffffff" alt="GitHub repository" />
+  </a>
+  <a href="https://huggingface.co/SteinsGateSg/mayuri-voice">
+    <img src="https://img.shields.io/badge/HF%20Model-fcd34d?style=flat-square&logo=huggingface&logoColor=2b1d13" alt="Hugging Face model" />
+  </a>
+  <a href="https://huggingface.co/datasets/SteinsGateSg/mayuri-voice-dataset">
+    <img src="https://img.shields.io/badge/HF%20Dataset-f59e0b?style=flat-square&logo=huggingface&logoColor=2b1d13" alt="Hugging Face dataset" />
+  </a>
+</p>
 
-Project homepage: [docs/index.html](docs/index.html)
+中文文档： [README_ZH.md](README_ZH.md)
 
 `Mayuri-Amadeus` is a standalone Shiina Mayuri character-instance repository prepared for GitHub publication.
 
@@ -19,15 +32,6 @@ Large assets are intentionally published outside this repository:
 - final model weights: Hugging Face model repo
 - full audio dataset: Hugging Face dataset repo
 - local training outputs: not tracked in git
-
-## External Repositories
-
-- GitHub character repo:
-  `https://github.com/SteinsGateSg/Mayuri-Amadeus`
-- Hugging Face model:
-  `https://huggingface.co/SteinsGateSg/mayuri-voice`
-- Hugging Face dataset:
-  `https://huggingface.co/datasets/SteinsGateSg/mayuri-voice-dataset`
 
 ## Repository Layout
 

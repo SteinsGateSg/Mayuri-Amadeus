@@ -228,6 +228,10 @@ a {
   margin-top: 24px;
 }
 
+.icon-links {
+  align-items: center;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -247,6 +251,41 @@ a {
 .button.secondary {
   background: rgba(255, 255, 255, 0.58);
   border-color: rgba(176, 70, 60, 0.22);
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 1px solid rgba(176, 70, 60, 0.18);
+  background: rgba(255, 252, 247, 0.76);
+  color: #3f241b;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(39, 24, 17, 0.08);
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+.icon-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 249, 241, 0.94);
+  border-color: rgba(176, 70, 60, 0.34);
+}
+
+.icon-link svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.icon-link.is-hf {
+  font-size: 1.45rem;
+}
+
+.icon-emoji {
+  line-height: 1;
 }
 
 .hero-panel,
