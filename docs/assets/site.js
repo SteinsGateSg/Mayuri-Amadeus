@@ -3,6 +3,12 @@ const translations = {
     title: "Mayuri-Amadeus",
     description:
       "Mayuri-Amadeus is a Shiina Mayuri character-instance repository for GPT-SoVITS training, reference management, and inference.",
+    "landing.kicker": "A Character Voice Release",
+    "landing.quote":
+      "Some voices do not remain in the past. They return through the seam between memory and dusk.",
+    "landing.subquote":
+      "A Shiina Mayuri voice release shaped around warmth, memory, and the quiet gravity of returning worlds.",
+    "landing.button": "Enter Project",
     "hero.eyebrow": "Character Voice System",
     "hero.lede":
       "A Shiina Mayuri character repository shaped for public release: curated refs, model metadata, training wrappers, and a lightweight inference workflow built around GPT-SoVITS.",
@@ -11,6 +17,10 @@ const translations = {
     "hero.kicker": "Final Pair",
     "hero.microcopy":
       "Reference-driven single-character setup tuned on top of GPT-SoVITS v2.",
+    "visual.tag": "Worldline Fragment",
+    "visual.title": "A quieter image inside the project page",
+    "visual.body":
+      "The landing screen opens with distance and sky. Inside the project, this earlier image stays as a warmer, more intimate fragment of the same mood.",
     "stats.dataset": "dataset WAV clips",
     "stats.filtered": "filtered training samples",
     "stats.duration": "filtered speech duration",
@@ -78,6 +88,12 @@ const translations = {
     title: "Mayuri-Amadeus",
     description:
       "Mayuri-Amadeus 是一个面向 GPT-SoVITS 的椎名真由理角色实例仓库，包含参考库、模型元数据与推理入口。",
+    "landing.kicker": "角色语音发布页",
+    "landing.quote":
+      "有些声音不会停在过去，它会沿着记忆与黄昏之间的缝隙，轻轻回到你身边。",
+    "landing.subquote":
+      "一个围绕温柔、记忆与回归世界线气质整理出来的椎名真由理语音发布页。",
+    "landing.button": "进入项目页",
     "hero.eyebrow": "角色语音系统",
     "hero.lede":
       "一个面向公开发布整理过的椎名真由理角色仓库：包含精选参考音频、模型元数据、训练封装脚本，以及围绕 GPT-SoVITS 的轻量推理工作流。",
@@ -86,6 +102,10 @@ const translations = {
     "hero.kicker": "最终模型组合",
     "hero.microcopy":
       "基于 GPT-SoVITS v2 调优的 reference-driven 单角色方案。",
+    "visual.tag": "世界线碎片",
+    "visual.title": "把更安静的那张图留在项目页里",
+    "visual.body":
+      "首屏用更开阔的天空和距离感来进入气氛，项目页里则保留这张更温暖、更贴近角色的旧图，作为同一情绪的另一面。",
     "stats.dataset": "数据集音频片段",
     "stats.filtered": "过滤后训练样本",
     "stats.duration": "过滤后语音时长",
@@ -153,6 +173,12 @@ const translations = {
     title: "Mayuri-Amadeus",
     description:
       "Mayuri-Amadeus は GPT-SoVITS ベースの椎名まゆりキャラクター音声リポジトリです。参照音声バンク、モデル情報、推論入口を含みます。",
+    "landing.kicker": "キャラクターボイス公開ページ",
+    "landing.quote":
+      "ある声は過去に留まらない。記憶と夕暮れの継ぎ目を抜けて、そっとあなたの元へ戻ってくる。",
+    "landing.subquote":
+      "やわらかさ、記憶、そして戻ってくる世界線の気配を軸に整えた、椎名まゆり音声リリースです。",
+    "landing.button": "プロジェクトへ進む",
     "hero.eyebrow": "キャラクターボイスシステム",
     "hero.lede":
       "椎名まゆりのために公開向けに整えたキャラクターリポジトリ。厳選された参照音声、モデルメタデータ、学習ラッパー、そして GPT-SoVITS 上の軽量推論ワークフローをまとめています。",
@@ -161,6 +187,10 @@ const translations = {
     "hero.kicker": "最終モデル構成",
     "hero.microcopy":
       "GPT-SoVITS v2 上で調整した reference-driven 単一キャラクター構成です。",
+    "visual.tag": "世界線の断片",
+    "visual.title": "より静かな一枚はプロジェクトページ側へ",
+    "visual.body":
+      "ランディングでは空と距離感で導入し、プロジェクト本編では以前の画像を、より温かく親密な感触を持つ同一ムードの断片として残します。",
     "stats.dataset": "データセット音声クリップ",
     "stats.filtered": "学習用フィルタ済みサンプル",
     "stats.duration": "フィルタ後の総音声時間",
