@@ -1,12 +1,12 @@
 # Data
 
-This repository does not track the full training audio in git.
+Dataset assets for `Mayuri-Amadeus` are split between this repository and the Hugging Face dataset release.
 
-Use the Hugging Face dataset repo for the complete release:
+Complete dataset release:
 
 - `https://huggingface.co/datasets/SteinsGateSg/mayuri-voice-dataset`
 
-Expected local layout after download:
+Expected local layout:
 
 ```text
 data/
@@ -19,4 +19,3 @@ data/
   manifests/
     mayuri_ja_filtered.list
 ```
-

@@ -17,34 +17,34 @@ const translations = {
     "hero.kicker": "Final Pair",
     "hero.microcopy":
       "Reference-driven single-character setup tuned on top of GPT-SoVITS v2.",
-    "visual.tag": "Worldline Fragment",
-    "visual.title": "An ink-wash fragment from the same dusk",
+    "visual.tag": "Afterglow Fragment",
+    "visual.title": "A softer dusk, closer to her voice",
     "visual.body":
-      "This image remains inside the project page as a softer, more intimate view of the same worldline atmosphere.",
+      "Another frame from the same evening, quieter and nearer, as if the next line has already paused in the air.",
     "stats.dataset": "dataset WAV clips",
     "stats.filtered": "filtered training samples",
     "stats.duration": "filtered speech duration",
     "stats.refs": "reference-bank emotion groups",
-    "overview.tag": "What This Repo Is",
-    "overview.title": "Character repo, not framework repo",
+    "overview.tag": "Character Constellation",
+    "overview.title": "A voice gathered around Mayuri",
     "overview.body":
-      "Mayuri-Amadeus is the character-instance side of a two-repo split. It keeps Mayuri-specific assets and metadata, while reusable workflow code lives in Persona-Forge.",
+      "A release gathered around one returning voice: refs, small mood fragments, and the pieces needed to let her remain near the listener.",
     "overview.card1.title": "Curated Refs",
     "overview.card1.body":
       "Small, emotion-grouped reference clips are included directly in the repository.",
-    "overview.card2.title": "HF-Backed Assets",
+    "overview.card2.title": "Released Pair",
     "overview.card2.body":
-      "Large model files and the full dataset are published on Hugging Face instead of git.",
-    "overview.card3.title": "Inference-Ready",
+      "The public voice rests on one stable pair: SoVITS e20 and GPT e8.",
+    "overview.card3.title": "Ready to Speak",
     "overview.card3.body":
-      "A thin wrapper resolves the final GPT + SoVITS pair once you download them into models/.",
-    "overview.card4.title": "LLM-Friendly",
+      "Refs, metadata, and the final pair are arranged for immediate listening.",
+    "overview.card4.title": "Future Dialogues",
     "overview.card4.body":
-      "The repository is structured as a reusable character asset for later dialogue and retrieval demos.",
+      "The structure is ready for later scene prompts, retrieval, and role-style dialogue.",
     "quick.tag": "Quick Start",
     "quick.title": "Run local synthesis in one command",
     "quick.body":
-      "After downloading the final weights from Hugging Face into models/, you can generate Mayuri speech directly with the bundled reference bank.",
+      "Once the final pair is in place under models/, one command is enough to let the current release speak.",
     "demo.tag": "Audio Demo",
     "demo.title": "Short clips from the current release",
     "demo.body":
@@ -66,23 +66,23 @@ const translations = {
     "links.repo.title": "Core Documents",
     "links.assets.tag": "Assets",
     "links.assets.title": "What is inside",
-    "links.external.tag": "External",
-    "links.external.title": "Published endpoints",
+    "links.external.tag": "Signals",
+    "links.external.title": "Beyond this page",
     "links.external.model": "HF model repo",
     "links.external.dataset": "HF dataset repo",
     "links.external.github": "GitHub repo",
     "links.external.framework": "Persona-Forge framework repo",
     "roadmap.tag": "Next",
-    "roadmap.title": "Where this repository is headed",
-    "roadmap.item1.title": "1. Character release",
+    "roadmap.title": "Where this worldline opens next",
+    "roadmap.item1.title": "1. Additional scenes",
     "roadmap.item1.body":
-      "Ship a clean public GitHub repo linked to HF weights and dataset.",
-    "roadmap.item2.title": "2. Reference workflows",
+      "Expand the listening set with longer lines and alternate moods from the same voice.",
+    "roadmap.item2.title": "2. Reference moods",
     "roadmap.item2.body":
-      "Improve emotion-aware reference selection and publish better demo comparisons.",
-    "roadmap.item3.title": "3. LLM playground",
+      "Refine the reference bank around gentler, brighter, and more fragile shades of tone.",
+    "roadmap.item3.title": "3. Dialogue traces",
     "roadmap.item3.body":
-      "Connect the voice system to role-style generation, retrieval, and dialogue planning."
+      "Carry the voice into scene writing, retrieval, and role-style dialogue experiments."
   },
   zh: {
     title: "Mayuri-Amadeus",
@@ -102,34 +102,34 @@ const translations = {
     "hero.kicker": "最终模型组合",
     "hero.microcopy":
       "基于 GPT-SoVITS v2 调优的 reference-driven 单角色方案。",
-    "visual.tag": "世界线碎片",
-    "visual.title": "同一黄昏里的另一幅水墨片段",
+    "visual.tag": "余晖断章",
+    "visual.title": "更靠近她声音的一次黄昏回响",
     "visual.body":
-      "这张图保留在项目页中，作为同一世界线气氛下更柔和、更贴近角色的一面。",
+      "同一片夕色里的另一帧，安静、贴近，像是下一句台词已经停在空气里。",
     "stats.dataset": "数据集音频片段",
     "stats.filtered": "过滤后训练样本",
     "stats.duration": "过滤后语音时长",
     "stats.refs": "参考库情绪分组",
-    "overview.tag": "仓库定位",
-    "overview.title": "这是角色仓库，不是框架仓库",
+    "overview.tag": "角色星图",
+    "overview.title": "围绕真由理聚拢的一道声音",
     "overview.body":
-      "Mayuri-Amadeus 是“两仓库拆分”里的角色实例侧。它保存真由理专属的数据、参考库和模型元数据，而可复用工作流放在 Persona-Forge 中。",
+      "这是一份围绕“归来的声音”整理出的角色发布页：参考音频、情绪碎片，以及让她留在听者身边所需要的那些部分。",
     "overview.card1.title": "精选参考库",
     "overview.card1.body":
       "体积较小、按情绪分组的参考音频直接保留在仓库里，便于试听与演示。",
-    "overview.card2.title": "HF 承载大资产",
+    "overview.card2.title": "定版模型组合",
     "overview.card2.body":
-      "大模型文件和全量数据集都放在 Hugging Face，而不是直接塞进 git。",
-    "overview.card3.title": "可直接推理",
+      "当前公开的声音固定在一组稳定配对上：SoVITS e20 与 GPT e8。",
+    "overview.card3.title": "随时可听",
     "overview.card3.body":
-      "只要把最终 GPT 与 SoVITS 权重下载到 models/ 下，这个仓库就能直接跑本地推理。",
-    "overview.card4.title": "适合接入 LLM",
+      "参考音频、元数据与最终模型组合已经整理好，能够直接进入试听。",
+    "overview.card4.title": "未来对话",
     "overview.card4.body":
-      "整体结构被设计成一个可复用的角色语音资产，后续可以接到对话、检索和角色扮演 playground 上。",
+      "后续可以把这道声音继续接到场景生成、检索与角色式对话实验里。",
     "quick.tag": "快速开始",
     "quick.title": "一条命令生成语音",
     "quick.body":
-      "把最终权重从 Hugging Face 下载到 models/ 后，就可以直接结合内置参考库生成真由理语音。",
+      "只要最终模型组合已经放进 models/，一条命令就足够让这次发布开口说话。",
     "demo.tag": "音频 Demo",
     "demo.title": "当前版本的短音频示例",
     "demo.body":
@@ -151,23 +151,23 @@ const translations = {
     "links.repo.title": "核心文档",
     "links.assets.tag": "资产",
     "links.assets.title": "仓库里有什么",
-    "links.external.tag": "外部链接",
-    "links.external.title": "公开发布入口",
+    "links.external.tag": "信号",
+    "links.external.title": "页面之外",
     "links.external.model": "HF 模型仓库",
     "links.external.dataset": "HF 数据集仓库",
     "links.external.github": "GitHub 角色仓库",
     "links.external.framework": "Persona-Forge 框架仓库",
     "roadmap.tag": "下一步",
-    "roadmap.title": "这个仓库接下来会做什么",
-    "roadmap.item1.title": "1. 角色仓库发布",
+    "roadmap.title": "这条世界线接下来会延伸到哪里",
+    "roadmap.item1.title": "1. 更多场景片段",
     "roadmap.item1.body":
-      "把它整理成一个干净的公开 GitHub 仓库，并链接到 HF 上的模型与数据集。",
-    "roadmap.item2.title": "2. 参考库工作流",
+      "加入更长的台词与不同情绪层次，让同一把声音拥有更多回响。",
+    "roadmap.item2.title": "2. 参考音色层次",
     "roadmap.item2.body":
-      "继续改进情绪参考选择流程，并发布更规范的试听对比。",
-    "roadmap.item3.title": "3. LLM Playground",
+      "继续把参考库整理得更细，让温柔、明亮、脆弱这些细部更可辨认。",
+    "roadmap.item3.title": "3. 对话残响",
     "roadmap.item3.body":
-      "把这套语音系统接到角色风格生成、检索和对话规划上。"
+      "把这道声音继续接入场景书写、检索与角色化对话实验。"
   },
   ja: {
     title: "Mayuri-Amadeus",
@@ -187,34 +187,34 @@ const translations = {
     "hero.kicker": "最終モデル構成",
     "hero.microcopy":
       "GPT-SoVITS v2 上で調整した reference-driven 単一キャラクター構成です。",
-    "visual.tag": "世界線の断片",
-    "visual.title": "同じ夕景を映す水墨の断片",
+    "visual.tag": "余光の断章",
+    "visual.title": "彼女の声により近い黄昏のひとかけら",
     "visual.body":
-      "同じ世界線の空気を、よりやわらかく親密に映した一枚としてここに残しています。",
+      "同じ夕景の別の一瞬。より静かで、より近く、次の台詞がもう空気に留まっているような一枚です。",
     "stats.dataset": "データセット音声クリップ",
     "stats.filtered": "学習用フィルタ済みサンプル",
     "stats.duration": "フィルタ後の総音声時間",
     "stats.refs": "参照バンク感情カテゴリ",
-    "overview.tag": "このリポジトリについて",
-    "overview.title": "これはキャラクター側であり、フレームワーク側ではない",
+    "overview.tag": "キャラクター星図",
+    "overview.title": "まゆりのために集められたひとつの声",
     "overview.body":
-      "Mayuri-Amadeus は二分割構成のキャラクター側です。まゆり固有のデータ、参照バンク、モデルメタデータを保持し、再利用可能なワークフローは Persona-Forge に分離されています。",
+      "戻ってくるひとつの声のために、参照音声、感情の断片、そして彼女を近くに留めるための要素を集めた公開ページです。",
     "overview.card1.title": "厳選参照バンク",
     "overview.card1.body":
       "小さく整理された感情別参照クリップを直接リポジトリに含めています。",
-    "overview.card2.title": "大きな資産は HF へ",
+    "overview.card2.title": "公開モデルの組み合わせ",
     "overview.card2.body":
-      "大きなモデルとフルデータセットは git ではなく Hugging Face 側で配布します。",
-    "overview.card3.title": "推論しやすい構成",
+      "現在の公開音声は SoVITS e20 と GPT e8 の安定した組み合わせに支えられています。",
+    "overview.card3.title": "すぐに聴ける構成",
     "overview.card3.body":
-      "最終 GPT と SoVITS を models/ に置くだけでローカル推論が動くようになっています。",
-    "overview.card4.title": "LLM 連携向け",
+      "参照音声、メタデータ、最終ペアが揃っており、そのまま試聴へ進めます。",
+    "overview.card4.title": "これからの対話",
     "overview.card4.body":
-      "対話、検索、ロールプレイ用 playground に接続しやすいキャラクター音声資産として構成しています。",
+      "この声は今後、シーン生成、検索、ロールスタイル対話へとつながっていきます。",
     "quick.tag": "クイックスタート",
     "quick.title": "1 コマンドで音声生成",
     "quick.body":
-      "Hugging Face から最終重みを models/ に置けば、同梱の参照バンクでそのまままゆり音声を生成できます。",
+      "最終ペアが models/ に置かれていれば、1 コマンドでこの公開版の声を呼び戻せます。",
     "demo.tag": "音声デモ",
     "demo.title": "現行リリースの短いサンプル",
     "demo.body":
@@ -236,23 +236,23 @@ const translations = {
     "links.repo.title": "主要ドキュメント",
     "links.assets.tag": "アセット",
     "links.assets.title": "含まれているもの",
-    "links.external.tag": "外部リンク",
-    "links.external.title": "公開先",
+    "links.external.tag": "シグナル",
+    "links.external.title": "このページの先へ",
     "links.external.model": "HF モデルリポジトリ",
     "links.external.dataset": "HF データセットリポジトリ",
     "links.external.github": "GitHub キャラクターリポジトリ",
     "links.external.framework": "Persona-Forge フレームワークリポジトリ",
     "roadmap.tag": "次の段階",
-    "roadmap.title": "このリポジトリの次の展開",
-    "roadmap.item1.title": "1. キャラクターリリース",
+    "roadmap.title": "この世界線が次に開いていく先",
+    "roadmap.item1.title": "1. さらなる場面断片",
     "roadmap.item1.body":
-      "HF のモデルとデータセットを参照する、整った公開 GitHub リポジトリとして仕上げる。",
-    "roadmap.item2.title": "2. 参照ワークフロー",
+      "より長い台詞や異なる感情の揺らぎを加え、同じ声の余韻を広げていく。",
+    "roadmap.item2.title": "2. 参照音色の層",
     "roadmap.item2.body":
-      "感情ベースの参照選択を改善し、より整った試聴比較を公開する。",
-    "roadmap.item3.title": "3. LLM Playground",
+      "やわらかさ、明るさ、脆さといった細かな温度差を、参照バンクの中でさらに磨いていく。",
+    "roadmap.item3.title": "3. 対話の残響",
     "roadmap.item3.body":
-      "ロールスタイル生成、検索、対話計画とこの音声システムをつなぐ。"
+      "この声をシーン記述、検索、ロールスタイル対話の実験へと運んでいく。"
   }
 };
 

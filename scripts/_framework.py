@@ -16,6 +16,8 @@ def framework_candidates() -> list[Path]:
         candidates.append(Path(env_root).expanduser())
     candidates.extend(
         [
+            PROJECT_ROOT.parent / "Persona-Forge",
+            PROJECT_ROOT.parent / "character-voice-lab",
             PROJECT_ROOT / "third_party" / "Persona-Forge",
             PROJECT_ROOT / "third_party" / "character-voice-lab",
         ]

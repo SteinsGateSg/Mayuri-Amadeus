@@ -1,10 +1,11 @@
 # Raw Audio
 
-Download the full WAV dataset from Hugging Face and place it under:
+Place the full WAV release under:
 
 ```text
 data/raw/wav/
 ```
 
-The `wav/` directory is intentionally left empty in git.
+Download source:
 
+- `https://huggingface.co/datasets/SteinsGateSg/mayuri-voice-dataset`

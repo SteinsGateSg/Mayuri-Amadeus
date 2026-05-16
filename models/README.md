@@ -1,6 +1,6 @@
 # Models
 
-Place downloaded final weights here.
+Place the final released weights here.
 
 Expected layout:
 
@@ -12,7 +12,6 @@ models/
     mayuri_v2_e20.pth
 ```
 
-Source:
+Download source:
 
 - `https://huggingface.co/SteinsGateSg/mayuri-voice`
-

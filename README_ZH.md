@@ -1,60 +1,136 @@
-# Mayuri-Amadeus
+<div align="center">
 
-English documentation: [README.md](README.md)
+# ✦ Mayuri-Amadeus ✦
 
-项目主页： [docs/index.html](docs/index.html)
+<p><em>椎名真由理语音发布页 · 面向 GPT-SoVITS 的角色仓库</em></p>
 
-`Mayuri-Amadeus` 是一个面向 GitHub 发布整理过的椎名真由理角色实例仓库。
+<p>
+  <a href="https://steinsgatesg.github.io/Mayuri-Amadeus/">
+    <img src="https://img.shields.io/badge/🌆%20Homepage-4a2f23?style=for-the-badge&logoColor=fff7f2" alt="Homepage" />
+  </a>
+  <a href="https://github.com/SteinsGateSg/Mayuri-Amadeus">
+    <img src="https://img.shields.io/badge/🐙%20GitHub-181717?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub repository" />
+  </a>
+  <a href="https://huggingface.co/SteinsGateSg/mayuri-voice">
+    <img src="https://img.shields.io/badge/🤗%20HF%20Model-fcd34d?style=for-the-badge&logoColor=2b1d13" alt="Hugging Face model" />
+  </a>
+  <a href="https://huggingface.co/datasets/SteinsGateSg/mayuri-voice-dataset">
+    <img src="https://img.shields.io/badge/📚%20HF%20Dataset-f59e0b?style=for-the-badge&logoColor=2b1d13" alt="Hugging Face dataset" />
+  </a>
+</p>
 
-这个仓库主要包含：
+<p>
+  <img src="https://img.shields.io/badge/Voice-椎名真由理-b0463c?style=flat-square" alt="Voice" />
+  <img src="https://img.shields.io/badge/SoVITS-e20-8b5e3c?style=flat-square" alt="SoVITS e20" />
+  <img src="https://img.shields.io/badge/GPT-e8-6f8aa1?style=flat-square" alt="GPT e8" />
+  <img src="https://img.shields.io/badge/Reference%20Bank-10%20moods-c97a54?style=flat-square" alt="Reference Bank" />
+</p>
 
-- 项目文档和主页
+简体中文 · <a href="README.md">English</a>
+
+</div>
+
+`Mayuri-Amadeus` 是围绕一套公开椎名真由理语音版本整理出来的角色仓库：包含参考音频库、模型元数据、demo 资产，以及独立的本地推理入口。
+
+## 仓库内容
+
 - 按情绪分组整理好的参考音频库
-- 角色 profile 与最终模型组合说明
-- 面向 `Persona-Forge` 的薄封装脚本
-- 数据集元数据与训练筛选统计
+- 角色 profile 与最终模型组合元数据
+- 独立的 selector 与推理入口
+- 数据集元数据、过滤统计与情感标注结果
+- 项目主页与发布文档
 
-大资产不直接放在这个 GitHub 仓库里：
+## 推理链路
 
-- 最终模型权重：放在 Hugging Face model repo
-- 全量训练音频：放在 Hugging Face dataset repo
-- 本地训练输出：不纳入 git
+这个仓库里的本地推理 **不依赖** `Persona-Forge`。
 
-## 外部仓库
+本地需要准备：
 
-- GitHub 角色仓库：
-  `https://github.com/SteinsGateSg/Mayuri-Amadeus`
-- Hugging Face 模型仓库：
-  `https://huggingface.co/SteinsGateSg/mayuri-voice`
-- Hugging Face 数据集仓库：
-  `https://huggingface.co/datasets/SteinsGateSg/mayuri-voice-dataset`
+```text
+models/gpt/mayuri_v2-e8.ckpt
+models/sovits/mayuri_v2_e20.pth
+data/raw/wav/          # 仅训练时需要
+```
+
+自动选择参考音频：
+
+```bash
+python scripts/select_reference.py \
+  --target-text "亲爱的你啊，好久不见。" \
+  --target-language 中文 \
+  --backend heuristic \
+  --format json
+```
+
+自动选择参考并直接推理：
+
+```bash
+python scripts/synthesize.py \
+  --auto-select \
+  --target-text "おかりん、今日は何をしているの？" \
+  --target-language 日文 \
+  --output-dir outputs/preview/latest
+```
+
+指定固定参考音频推理：
+
+```bash
+python scripts/synthesize.py \
+  --ref-id MAY_0053 \
+  --target-text "おかりん、今日は何をしているの？" \
+  --target-language 日文 \
+  --output-dir outputs/preview/latest
+```
+
+## API Selector
+
+selector 支持 OpenAI 兼容接口，同时保留了本地模型接口位置，后续可以直接补上。
+
+```bash
+export SELECTOR_API_BASE="https://dashscope.aliyuncs.com/compatible-mode/v1"
+export SELECTOR_API_KEY="your_key"
+export SELECTOR_MODEL="qwen3.6-plus"
+
+python scripts/select_reference.py \
+  --target-text "元気出してほしいよ。" \
+  --target-language 日文 \
+  --backend api \
+  --format json
+```
+
+## 训练链路
+
+训练封装仍然使用通用框架仓库：
+
+- `Persona-Forge`
+
+推荐安装方式：
+
+```bash
+pip install -e /path/to/Persona-Forge
+```
+
+之后执行：
+
+```bash
+python scripts/build_manifest.py
+python scripts/train_gpt_sovits.py doctor
+```
 
 ## 仓库结构
 
 ```text
 Mayuri-Amadeus/
-  configs/
-    mayuri_v2.env.example
   data/
     meta/
-      mayuri_asr_raw.csv
     manifests/
-      mayuri_ja_filtered.stats.json
-      mayuri_ja_filtered.rejects.csv
-      README.md
     raw/
-      README.md
   docs/
     index.html
     assets/
   metadata/
     reference_bank/
-      emotion_labels.csv
-      emotion_labels.jsonl
-      emotion_summary.json
-      reference_shortlist.csv
   models/
-    README.md
     gpt/
     sovits/
   profiles/
@@ -65,128 +141,37 @@ Mayuri-Amadeus/
   scripts/
     build_manifest.py
     label_reference_emotions.py
+    select_reference.py
     synthesize.py
     train_gpt_sovits.py
   weights/
     final_model_combo.json
-    README.md
 ```
 
-## 仓库中包含什么
+## 资产边界
 
-纳入 git 的内容：
+纳入 git：
 
-- 最终整理好的参考音频库
-- 数据集转写 CSV
-- 过滤统计与 rejects 报告
+- 最终参考音频库
+- 转写 CSV
+- 过滤统计与 rejects
 - 情绪标注元数据
-- 角色专属文档与脚本封装
+- 文档与轻量脚本
 
-不纳入 git 的内容：
+不纳入 git：
 
-- 全量 `data/raw/wav/` 训练音频
-- 最终 GPT / SoVITS 权重文件
+- 全量 `data/raw/wav/`
+- 最终大模型权重
 - 生成出来的 `.list` manifest
 - 本地试听输出
 - Hugging Face 上传 staging 目录
-
-## 框架依赖
-
-这个仓库依赖通用训练框架仓库：
-
-- `Persona-Forge`
-
-本地开发推荐这样安装：
-
-```bash
-pip install -e /path/to/Persona-Forge
-```
-
-等框架仓库公开后，也可以直接从 GitHub 安装：
-
-```bash
-pip install git+https://github.com/SteinsGateSg/Persona-Forge.git
-```
-
-如果你不想全局安装，也可以把框架仓库克隆到：
-
-```text
-third_party/Persona-Forge
-```
-
-## 快速开始
-
-### 1. 克隆仓库
-
-```bash
-git clone https://github.com/SteinsGateSg/Mayuri-Amadeus.git
-cd Mayuri-Amadeus
-```
-
-### 2. 安装框架
-
-```bash
-pip install -e /path/to/Persona-Forge
-```
-
-### 3. 准备本地模型文件
-
-从 Hugging Face 模型仓库下载最终权重，并放到：
-
-```text
-models/gpt/mayuri_v2-e8.ckpt
-models/sovits/mayuri_v2_e20.pth
-```
-
-### 4. 直接推理
-
-```bash
-python scripts/synthesize.py \
-  --ref-id MAY_0053 \
-  --target-text "おかりん、今日は何をしているの？" \
-  --target-language 日文 \
-  --output-dir outputs/preview/latest
-```
-
-这个封装默认使用：
-
-- `refs/index.csv` 里的参考索引
-- `models/gpt/mayuri_v2-e8.ckpt`
-- `models/sovits/mayuri_v2_e20.pth`
-
-### 5. 准备训练
-
-先从 Hugging Face 数据集仓库下载全量音频，放到：
-
-```text
-data/raw/wav/
-```
-
-然后重建本地 manifest：
-
-```bash
-python scripts/build_manifest.py
-```
-
-之后执行：
-
-```bash
-python scripts/train_gpt_sovits.py doctor
-```
-
-## 训练说明
-
-- 这个仓库是角色实例仓库，不是通用训练框架仓库
-- 可复用的训练逻辑在 `Persona-Forge`
-- `.list` manifest 不纳入 git，因为它依赖本地克隆路径
-- 精选参考音频库体积较小，保留在 GitHub 仓库里，方便试听和 demo
 
 ## 最终模型组合
 
 - SoVITS：`e20`
 - GPT：`e8`
 
-详细信息见：
+详见：
 
 - [profiles/mayuri.yaml](profiles/mayuri.yaml)
 - [weights/final_model_combo.json](weights/final_model_combo.json)

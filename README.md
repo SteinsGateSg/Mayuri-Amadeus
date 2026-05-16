@@ -1,64 +1,136 @@
-# Mayuri-Amadeus
+<div align="center">
 
-<p align="left">
+# ✦ Mayuri-Amadeus ✦
+
+<p><em>Shiina Mayuri Voice Release · Character Repository for GPT-SoVITS</em></p>
+
+<p>
   <a href="https://steinsgatesg.github.io/Mayuri-Amadeus/">
-    <img src="https://img.shields.io/badge/Homepage-4a2f23?style=flat-square&logo=googlechrome&logoColor=fff7f2" alt="Homepage" />
+    <img src="https://img.shields.io/badge/🌆%20Homepage-4a2f23?style=for-the-badge&logoColor=fff7f2" alt="Homepage" />
   </a>
   <a href="https://github.com/SteinsGateSg/Mayuri-Amadeus">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=ffffff" alt="GitHub repository" />
+    <img src="https://img.shields.io/badge/🐙%20GitHub-181717?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub repository" />
   </a>
   <a href="https://huggingface.co/SteinsGateSg/mayuri-voice">
-    <img src="https://img.shields.io/badge/HF%20Model-fcd34d?style=flat-square&logo=huggingface&logoColor=2b1d13" alt="Hugging Face model" />
+    <img src="https://img.shields.io/badge/🤗%20HF%20Model-fcd34d?style=for-the-badge&logoColor=2b1d13" alt="Hugging Face model" />
   </a>
   <a href="https://huggingface.co/datasets/SteinsGateSg/mayuri-voice-dataset">
-    <img src="https://img.shields.io/badge/HF%20Dataset-f59e0b?style=flat-square&logo=huggingface&logoColor=2b1d13" alt="Hugging Face dataset" />
+    <img src="https://img.shields.io/badge/📚%20HF%20Dataset-f59e0b?style=for-the-badge&logoColor=2b1d13" alt="Hugging Face dataset" />
   </a>
 </p>
 
-中文文档： [README_ZH.md](README_ZH.md)
+<p>
+  <img src="https://img.shields.io/badge/Voice-Shiina%20Mayuri-b0463c?style=flat-square" alt="Voice" />
+  <img src="https://img.shields.io/badge/SoVITS-e20-8b5e3c?style=flat-square" alt="SoVITS e20" />
+  <img src="https://img.shields.io/badge/GPT-e8-6f8aa1?style=flat-square" alt="GPT e8" />
+  <img src="https://img.shields.io/badge/Reference%20Bank-10%20moods-c97a54?style=flat-square" alt="Reference Bank" />
+</p>
 
-`Mayuri-Amadeus` is a standalone Shiina Mayuri character-instance repository prepared for GitHub publication.
+English · <a href="README_ZH.md">简体中文</a>
 
-This repository contains:
+</div>
 
-- project documentation and landing page
-- curated reference clips grouped by emotion
-- character profile and final model metadata
-- thin wrapper scripts for `Persona-Forge`
-- dataset metadata and training-manifest statistics
+`Mayuri-Amadeus` is a character repository centered on one public Shiina Mayuri voice release: curated references, model metadata, demo assets, and standalone local inference.
 
-Large assets are intentionally published outside this repository:
+## What Lives Here
 
-- final model weights: Hugging Face model repo
-- full audio dataset: Hugging Face dataset repo
-- local training outputs: not tracked in git
+- curated reference clips grouped by mood
+- character profile and final model-pair metadata
+- standalone selector and synthesis entrypoints
+- dataset metadata, filtering stats, and emotion labels
+- project homepage and release documents
+
+## Inference Path
+
+Local inference in this repository does **not** depend on `Persona-Forge`.
+
+Required local files:
+
+```text
+models/gpt/mayuri_v2-e8.ckpt
+models/sovits/mayuri_v2_e20.pth
+data/raw/wav/          # optional for training only
+```
+
+Select a reference automatically:
+
+```bash
+python scripts/select_reference.py \
+  --target-text "亲爱的你啊，好久不见。" \
+  --target-language 中文 \
+  --backend heuristic \
+  --format json
+```
+
+Run synthesis with automatic reference selection:
+
+```bash
+python scripts/synthesize.py \
+  --auto-select \
+  --target-text "おかりん、今日は何をしているの？" \
+  --target-language 日文 \
+  --output-dir outputs/preview/latest
+```
+
+Run synthesis with a fixed reference:
+
+```bash
+python scripts/synthesize.py \
+  --ref-id MAY_0053 \
+  --target-text "おかりん、今日は何をしているの？" \
+  --target-language 日文 \
+  --output-dir outputs/preview/latest
+```
+
+## API Selector
+
+The selector supports an OpenAI-compatible API backend and keeps a reserved local-model interface for later expansion.
+
+```bash
+export SELECTOR_API_BASE="https://dashscope.aliyuncs.com/compatible-mode/v1"
+export SELECTOR_API_KEY="your_key"
+export SELECTOR_MODEL="qwen3.6-plus"
+
+python scripts/select_reference.py \
+  --target-text "元気出してほしいよ。" \
+  --target-language 日文 \
+  --backend api \
+  --format json
+```
+
+## Training Path
+
+Training wrappers still use the generic framework repository:
+
+- `Persona-Forge`
+
+Recommended install:
+
+```bash
+pip install -e /path/to/Persona-Forge
+```
+
+Then:
+
+```bash
+python scripts/build_manifest.py
+python scripts/train_gpt_sovits.py doctor
+```
 
 ## Repository Layout
 
 ```text
 Mayuri-Amadeus/
-  configs/
-    mayuri_v2.env.example
   data/
     meta/
-      mayuri_asr_raw.csv
     manifests/
-      mayuri_ja_filtered.stats.json
-      mayuri_ja_filtered.rejects.csv
-      README.md
     raw/
-      README.md
   docs/
     index.html
     assets/
   metadata/
     reference_bank/
-      emotion_labels.csv
-      emotion_labels.jsonl
-      emotion_summary.json
-      reference_shortlist.csv
   models/
-    README.md
     gpt/
     sovits/
   profiles/
@@ -69,125 +141,32 @@ Mayuri-Amadeus/
   scripts/
     build_manifest.py
     label_reference_emotions.py
+    select_reference.py
     synthesize.py
     train_gpt_sovits.py
   weights/
     final_model_combo.json
-    README.md
 ```
 
-## What Is Included
+## Assets
 
-Included in git:
+Tracked in git:
 
-- final selected reference bank
-- dataset transcript CSV
-- filtering stats and rejects report
+- selected reference bank
+- transcript CSV
+- filtering stats and rejects
 - emotion-label metadata
-- role-specific docs and wrappers
+- docs and lightweight wrappers
 
-Not included in git:
+Not tracked in git:
 
-- full `data/raw/wav/` training audio
-- final GPT / SoVITS weight files
-- generated manifest `.list`
+- full `data/raw/wav/`
+- final large weight files
+- generated `.list` manifests
 - local preview outputs
 - Hugging Face upload staging folders
 
-## Framework Dependency
-
-This repository depends on the generic framework repo:
-
-- `Persona-Forge`
-
-Recommended local development install:
-
-```bash
-pip install -e /path/to/Persona-Forge
-```
-
-After the framework repo is public, you can also install it from GitHub:
-
-```bash
-pip install git+https://github.com/SteinsGateSg/Persona-Forge.git
-```
-
-If you prefer not to install it globally, you can place a clone at:
-
-```text
-third_party/Persona-Forge
-```
-
-inside this repository.
-
-## Quick Start
-
-### 1. Clone this repository
-
-```bash
-git clone https://github.com/SteinsGateSg/Mayuri-Amadeus.git
-cd Mayuri-Amadeus
-```
-
-### 2. Install the framework
-
-```bash
-pip install -e /path/to/Persona-Forge
-```
-
-### 3. Prepare local model files
-
-Download the final published weights from the Hugging Face model repo into:
-
-```text
-models/gpt/mayuri_v2-e8.ckpt
-models/sovits/mayuri_v2_e20.pth
-```
-
-### 4. Run synthesis
-
-```bash
-python scripts/synthesize.py \
-  --ref-id MAY_0053 \
-  --target-text "おかりん、今日は何をしているの？" \
-  --target-language 日文 \
-  --output-dir outputs/preview/latest
-```
-
-This wrapper uses:
-
-- `refs/index.csv` for reference lookup
-- `models/gpt/mayuri_v2-e8.ckpt` by default
-- `models/sovits/mayuri_v2_e20.pth` by default
-
-### 5. Prepare for training
-
-Download the full dataset from the Hugging Face dataset repo and place WAV files in:
-
-```text
-data/raw/wav/
-```
-
-Then rebuild the local manifest:
-
-```bash
-python scripts/build_manifest.py
-```
-
-After that, run:
-
-```bash
-python scripts/train_gpt_sovits.py doctor
-```
-
-## Training Notes
-
-- This repository is the character repo, not the generic framework repo.
-- The reusable training logic lives in `Persona-Forge`.
-- The generated `.list` manifest is intentionally not tracked because it depends on the local clone path.
-- The bundled reference bank is small enough for GitHub and is intended for inference and demos.
-
-## Final Model Pair
+## Final Pair
 
 - SoVITS: `e20`
 - GPT: `e8`
